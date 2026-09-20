@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Makes the website responsive on mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <!-- Connect our CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Main mobile app container -->
+    <div class="app">
+        <header class="app-header">
+            <div>
+                <p class="small-title">UTILITY TOOL</p>
+                <h1>Unit Converter</h1>
+            </div>
+            <!-- Dark mode button -->
+            <button class="icon-btn" onclick="toggleDarkMode()">☾</button>
+        </header>
+        <main class="content">
+            <!-- Unit category -->
+            <div class="input-group">
+                <label for="category">Unit Type</label>
+                <select id="category" onchange="loadUnits()">
+                    <option value="length">📏 Length</option>
+                    <option value="mass">⚖️ Mass</option>
+                    <option value="time">⏱️ Time</option>
+                    <option value="temperature">🌡️ Temperature</option>
+                    <option value="area">◻️ Area</option>
+                    <option value="volume">🧪 Volume</option>
+                    <option value="speed">🚗 Speed</option>
+                </select>
+            </div>
+            <!-- Value input -->
+            <div class="input-group">
+                <label for="value">Enter Value</label>
+                <input type="number" id="value" placeholder="0" oninput="convertUnit()">
+            </div>
+            <!-- From and To units -->
+            <div class="unit-section">
+                <!-- From unit -->
+                <div class="input-group">
+                    <label for="fromUnit">From</label>
+                    <select id="fromUnit" onchange="convertUnit()"></select>
+                </div>
+                <!-- Swap button -->
+                <button class="swap-button" onclick="swapUnits()">⇅</button>
+                <!-- To unit -->
+                <div class="input-group">
+                    <label for="toUnit">To</label>
+                    <select id="toUnit" onchange="convertUnit()">
+                    </select>
+                </div>
+            </div>
+            <!-- Convert button -->
+            <button class="convert-button" onclick="convertUnit()">Convert</button>
+            <!-- ================= RESULT ================= -->
+            <section class="result-card">
+                <div class="result-heading">
+                    <span>RESULT</span>
+                    <!-- Copy result button -->
+                    <button class="copy-btn" onclick="copyResult()">Copy</button>
+                </div>
+                <!-- Conversion result -->
+                <div class="result-value" id="result">
+                    Enter a value to convert.
+                </div>
+                <!-- SI unit -->
+                <div class="si-unit">
+                    <span>SI Base Unit</span>
+                    <strong id="siUnit">-</strong>
+                </div>
+            </section>
+            <!-- ================= FORMULA ================= -->
+            <section class="info-card">
+                <div class="card-title">
+                    <span class="card-icon">
+                        ∑
+                    </span>
+                    <h2>Conversion Formula</h2>
+                </div>
+                <p id="formula">
+                    Choose a value and units to see the formula.
+                </p>
+            </section>
+            <!-- ================= FUN FACT ================= -->
+            <section class="fact-card">
+                <div class="card-title">
+                    <span class="card-icon">
+                        💡
+                    </span>
+                    <h2>Did You Know?</h2>
+                </div>
+                <p id="fact">
+                    Select a unit category to discover
+                    something interesting.
+                </p>
+            </section>
+        </main>
+        <!-- ================= BOTTOM NAVIGATION ================= -->
+        <nav class="bottom-nav">
+            <button class="nav-item active">
+                <span>⌂</span>
+                <small>Converter</small>
+            </button>
+            <button class="nav-item" onclick="showHistory()">
+                <span>↶</span>
+                <small>History</small>
+            </button>
+            <button class="nav-item" onclick="showAbout()">
+                <span>ⓘ</span>
+                <small>About</small>
+            </button>
+        </nav>
+    </div>
+    <!-- Connect JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

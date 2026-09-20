@@ -1,0 +1,490 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ---------- BODY ---------- */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #e9edf3;
+    color: #1f2937;
+}
+
+
+/* ---------- MOBILE APP CONTAINER ---------- */
+
+.app {
+    width: 100%;
+    max-width: 480px;
+    min-height: 100vh;
+    margin: auto;
+    background: #f7f9fc;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.app-header {
+    background: #2563eb;
+    color: white;
+
+    padding: 22px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 0 0 25px 25px;
+}
+
+
+.small-title {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+
+.app-header h1 {
+    font-size: 25px;
+}
+
+
+/* ---------- DARK MODE BUTTON ---------- */
+
+.icon-btn {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* ---------- MAIN CONTENT ---------- */
+
+.content {
+    padding: 20px;
+}
+
+
+/* ---------- INPUT GROUP ---------- */
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+
+label {
+    display: block;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    margin-bottom: 7px;
+
+    color: #4b5563;
+}
+
+
+/* ---------- INPUTS & SELECTS ---------- */
+
+input,
+select {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #d8dee8;
+
+    border-radius: 12px;
+
+    background: white;
+
+    color: #222;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+input:focus,
+select:focus {
+    border-color: #2563eb;
+}
+
+
+/* ---------- VALUE INPUT ---------- */
+
+#value {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* ---------- FROM / TO SECTION ---------- */
+
+.unit-section {
+    display: grid;
+
+    grid-template-columns: 1fr 45px 1fr;
+
+    gap: 10px;
+
+    align-items: end;
+}
+
+
+.unit-section .input-group {
+    margin-bottom: 0;
+}
+
+
+/* ---------- SWAP BUTTON ---------- */
+
+.swap-button {
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #e5edff;
+
+    color: #2563eb;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+
+.swap-button:hover {
+    background: #dbe7ff;
+}
+
+
+/* ---------- CONVERT BUTTON ---------- */
+
+.convert-button {
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 20px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.convert-button:hover {
+    background: #1d4ed8;
+}
+
+
+/* ---------- RESULT CARD ---------- */
+
+.result-card {
+    margin-top: 22px;
+
+    padding: 20px;
+
+    background: #111827;
+
+    color: white;
+
+    border-radius: 18px;
+}
+
+
+.result-heading {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.result-heading span {
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    opacity: 0.7;
+}
+
+
+.copy-btn {
+    border: none;
+
+    background: #374151;
+
+    color: white;
+
+    padding: 6px 10px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+
+/* ---------- RESULT VALUE ---------- */
+
+.result-value {
+    margin-top: 15px;
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    line-height: 1.4;
+}
+
+
+/* ---------- SI UNIT ---------- */
+
+.si-unit {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 18px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid #374151;
+
+    font-size: 13px;
+}
+
+
+.si-unit span {
+    color: #9ca3af;
+}
+
+
+/* ---------- INFORMATION CARDS ---------- */
+
+.info-card,
+.fact-card {
+    margin-top: 16px;
+
+    padding: 18px;
+
+    background: white;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+.card-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 12px;
+}
+
+
+.card-title h2 {
+    font-size: 16px;
+}
+
+
+.card-icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #e8efff;
+
+    color: #2563eb;
+
+    font-weight: bold;
+}
+
+
+.info-card p,
+.fact-card p {
+    color: #5f6875;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* ---------- FUN FACT CARD ---------- */
+
+.fact-card {
+    background: #fff8df;
+}
+
+
+.fact-card .card-icon {
+    background: #fff0b3;
+}
+
+
+/* ---------- BOTTOM NAVIGATION ---------- */
+
+.bottom-nav {
+    position: fixed;
+
+    bottom: 0;
+
+    width: 100%;
+
+    max-width: 480px;
+
+    height: 70px;
+
+    background: white;
+
+    border-top: 1px solid #e5e7eb;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+}
+
+
+.nav-item {
+    border: none;
+
+    background: transparent;
+
+    color: #9ca3af;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 4px;
+
+    cursor: pointer;
+}
+
+
+.nav-item span {
+    font-size: 21px;
+}
+
+
+.nav-item small {
+    font-size: 11px;
+}
+
+
+.nav-item.active {
+    color: #2563eb;
+}
+
+
+/* =====================================================
+   DARK MODE
+   ===================================================== */
+
+body.dark {
+    background: #111827;
+}
+
+
+body.dark .app {
+    background: #111827;
+}
+
+
+body.dark input,
+body.dark select,
+body.dark .info-card {
+    background: #1f2937;
+
+    color: white;
+
+    border-color: #374151;
+}
+
+
+body.dark label {
+    color: #d1d5db;
+}
+
+
+body.dark .info-card p,
+body.dark .fact-card p {
+    color: #d1d5db;
+}
+
+body.dark .bottom-nav {
+    background: #1f2937;
+
+    border-color: #374151;
+}
+
+body.dark .fact-card {
+    background: #292516;
+}
+
+
+/* =====================================================
+   DESKTOP PREVIEW
+
+   On a large screen the app still stays
+   like a mobile application.
+   ===================================================== */
+
+@media (min-width: 600px) {
+
+    .app {
+        min-height: 100vh;
+
+        box-shadow:
+            0 0 30px rgba(0, 0, 0, 0.1);
+    }
+}
