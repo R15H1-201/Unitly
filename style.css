@@ -29,30 +29,36 @@ body {
 
 /* ---------- HEADER ---------- */
 
+/* ---------- HEADER ---------- */
+
 .app-header {
-    background: #2563eb;
+    background: #d81212;
     color: white;
-
-    padding: 22px 20px;
-
+    padding: 16px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     border-radius: 0 0 25px 25px;
+    position: relative;
 }
 
-
-.small-title {
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    opacity: 0.8;
-    margin-bottom: 5px;
+/* Logo sizing */
+.header-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 8px;
 }
 
+/* Centers the title perfectly between left and right controls */
+.header-center {
+    flex: 1;
+    text-align: center;
+}
 
-.app-header h1 {
-    font-size: 25px;
+.header-center h1 {
+    font-size: 30px;
+    font-weight: 700;
 }
 
 
@@ -193,7 +199,7 @@ select:focus {
 
     border-radius: 12px;
 
-    background: #2563eb;
+    background: #d81212;
 
     color: white;
 
